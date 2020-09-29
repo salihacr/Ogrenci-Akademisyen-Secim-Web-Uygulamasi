@@ -4,12 +4,11 @@
 
 Proje ASP.NET framework ve Sql Server tabanlı bir web uygulamasıdır. Bilgisayarınızda çalıştırmak için şu adımları gerçekleştiriniz.
 <ol>
-  <li> Sql Server üzerinde bir veritabanı oluşturun. Sonrasında New Query i seçip <a href="https://github.com/salihacr/Ogrenci-Akademisyen-Tez-Secim-Web-Uygulamasi/blob/master/ProjeSonTest/database-script/db-script.sql">şu kodları</a> yapıştırın ve execute edin(çalıştırın).</li>
-<li> Veritabanı oluştuktan sonra, projeyi Visual Studio (2017 veya üzeri) açın. Proje ana dizininde bulunan <b>"Web Config"</b> dosyasını açın.
+<li> Projeyi Visual Studio (2017 veya üzeri) açın. Proje ana dizininde bulunan <b>"Web Config"</b> dosyasını açın.
 <p align="center">
-  <img src="https://github.com/salihacr/Ogrenci-Akademisyen-Tez-Secim-Web-Uygulamasi/blob/master/ProjeSonTest/project-images/web-config.PNG">
+  <img src="https://github.com/salihacr/Ogrenci-Akademisyen-Secim-Web-Uygulamasi/blob/master/TOGU_CENG_PANEL/project_images/web-config.PNG">
 </p>
-  Buradaki data source kısmına Sql Server name (adını) yazınız. Inıtal Catalog'a da "oluşturduğunuz veritabanı ismi" giriniz. 
+  Buradaki attach db file proje dizinini, projeyi yüklediğiniz dizine göre ayarlayınız. 
 </li>
   <li> Projeyi çalıştırıp ilgili incelemeyi veya düzenlemeyi yapabilirsiniz.</li>
 </ol>
@@ -26,9 +25,8 @@ Dönemleri aktif pasif edebilir, sistemde istediği tüm verileri tek bir operas
   Kullanıcı Girişi
 </h4>
 <p>
-  Normal kullanıcılar onlara tanımlanmış olan email ve şifre ile sisteme giriş yaparlar. Yetkili kullanıcılar ise sisteme giriş yaparken akademisyen olduğunu işaret eden
-  seçim kutusunu işaretlemek zorundadırlar.
-  <img src="https://github.com/salihacr/Ogrenci-Akademisyen-Tez-Secim-Web-Uygulamasi/blob/master/ProjeSonTest/project-images/login.PNG">
+  Tüm kullanıcılar onlara tanımlanmış olan email ve şifre ile sisteme giriş yaparlar. Kullanıcılar rollerine göre sistemde ilgili sayfalara aktarılır.
+  <img src="https://github.com/salihacr/Ogrenci-Akademisyen-Secim-Web-Uygulamasi/blob/master/TOGU_CENG_PANEL/project_images/login.PNG">
 </p>
 
 <h4 align="left">
@@ -38,9 +36,9 @@ Dönemleri aktif pasif edebilir, sistemde istediği tüm verileri tek bir operas
   Admin panelide kendi içinde iki kısma ayrılmaktadır, yetkisiz akademisyenler yalnızca kendilerini seçen öğrencilerin listesini görebilirken, yetkili akademisyenler veya sistem
   yetkilileri Ekle Sil Güncelle Listele (CRUD) işlemlerinin tamamını yapabilmektedirler.
   
-  <img src="https://github.com/salihacr/Ogrenci-Akademisyen-Tez-Secim-Web-Uygulamasi/blob/master/ProjeSonTest/project-images/acd.PNG">
-  <img src="https://github.com/salihacr/Ogrenci-Akademisyen-Tez-Secim-Web-Uygulamasi/blob/master/ProjeSonTest/project-images/acd4.PNG">
-  <img src="https://github.com/salihacr/Ogrenci-Akademisyen-Tez-Secim-Web-Uygulamasi/blob/master/ProjeSonTest/project-images/acd2.PNG">
-  <img src="https://github.com/salihacr/Ogrenci-Akademisyen-Tez-Secim-Web-Uygulamasi/blob/master/ProjeSonTest/project-images/acd3.PNG">
+  <img src="https://github.com/salihacr/Ogrenci-Akademisyen-Secim-Web-Uygulamasi/blob/master/TOGU_CENG_PANEL/project_images/acd.PNG">
+  <img src="https://github.com/salihacr/Ogrenci-Akademisyen-Secim-Web-Uygulamasi/blob/master/TOGU_CENG_PANEL/project_images/acd4.PNG">
+  <img src="https://github.com/salihacr/Ogrenci-Akademisyen-Secim-Web-Uygulamasi/blob/master/TOGU_CENG_PANEL/project_images/acd2.PNG">
+  <img src="https://github.com/salihacr/Ogrenci-Akademisyen-Secim-Web-Uygulamasi/blob/master/TOGU_CENG_PANEL/project_images/acd3.PNG">
 </p>
 <p>Kendi senaryolarınıza göre projeyi düzenleyip kaynak belirtmek şartı ile kullanabilirsiniz.</p>
