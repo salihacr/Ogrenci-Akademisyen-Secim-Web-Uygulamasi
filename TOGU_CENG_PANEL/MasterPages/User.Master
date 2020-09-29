@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="TOGU_CENG_PANEL.MasterPages.User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../vendor/bootstrap/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="../vendor/img/muhendislik_tr.png" width="390" height="100" style="margin: -15px 0px -10px  -15px;" class="d-inline-block align-top">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="MakeChoice.aspx">
+                            <span class="link">Tercih Yap</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="form-inline">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                        </div>
+                        <asp:TextBox CssClass="form-control text-primary" ID="username" ReadOnly="true" runat="server"></asp:TextBox>
+                    </div>
+                </div>
+                <a runat="server" class="deneme" onserverclick="LogoutButton_Click">
+                    <span class="navbar-text text-danger ml-3 mr-1 link">Çıkış Yap </span><i class="text-white fa fa-sign-out mr-3"></i></a>
+            </div>
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script src="../vendor/scripts/jquery-3.0.0.min.js"></script>
+    <script src="../vendor/scripts/bootstrap.min.js"></script>
+</body>
+</html>

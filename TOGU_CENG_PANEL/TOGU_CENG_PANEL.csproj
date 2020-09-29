@@ -1,0 +1,374 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4501B9A2-3ECC-47E3-83F7-AD3862193C61}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TOGU_CENG_PANEL</RootNamespace>
+    <AssemblyName>TOGU_CENG_PANEL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\db.mdf" />
+    <Content Include="App_Data\db_log.ldf">
+      <DependentUpon>db.mdf</DependentUpon>
+    </Content>
+    <Content Include="db_script\db-script.sql" />
+    <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <Content Include="Management\Academicians.aspx" />
+    <Content Include="Management\AllOptions.aspx" />
+    <Content Include="Management\Records.aspx" />
+    <Content Include="Management\RemoveRecords.aspx" />
+    <Content Include="Management\Semesters.aspx" />
+    <Content Include="Management\StudentOptions.aspx" />
+    <Content Include="Management\Students.aspx" />
+    <Content Include="NotFound.aspx" />
+    <Content Include="project_images\acd.PNG" />
+    <Content Include="project_images\acd2.PNG" />
+    <Content Include="project_images\acd3.PNG" />
+    <Content Include="project_images\acd4.PNG" />
+    <Content Include="project_images\login.PNG" />
+    <Content Include="project_images\ogr.PNG" />
+    <Content Include="project_images\web-config.PNG" />
+    <Content Include="User\MakeChoice.aspx" />
+    <Content Include="vendor\assets\demo\chart-area-demo.js" />
+    <Content Include="vendor\assets\demo\chart-bar-demo.js" />
+    <Content Include="vendor\assets\demo\chart-pie-demo.js" />
+    <Content Include="vendor\assets\demo\datatables-demo.js" />
+    <Content Include="vendor\assets\img\error-404-monochrome.svg" />
+    <Content Include="vendor\bootstrap\bootstrap-grid.css" />
+    <Content Include="vendor\bootstrap\bootstrap-grid.min.css" />
+    <Content Include="vendor\bootstrap\bootstrap-reboot.css" />
+    <Content Include="vendor\bootstrap\bootstrap-reboot.min.css" />
+    <Content Include="vendor\bootstrap\bootstrap.css" />
+    <Content Include="vendor\bootstrap\bootstrap.min.css" />
+    <Content Include="vendor\css\navbar.css" />
+    <Content Include="vendor\css\styles.css" />
+    <Content Include="vendor\img\gou_logo.png" />
+    <Content Include="vendor\img\muhendislik_tr.png" />
+    <Content Include="vendor\js\scripts.js" />
+    <Content Include="vendor\Login.css" />
+    <Content Include="vendor\scripts\bootstrap.bundle.js" />
+    <Content Include="vendor\scripts\bootstrap.bundle.min.js" />
+    <Content Include="vendor\scripts\bootstrap.js" />
+    <Content Include="vendor\scripts\bootstrap.min.js" />
+    <Content Include="vendor\scripts\esm\popper-utils.js" />
+    <Content Include="vendor\scripts\esm\popper-utils.min.js" />
+    <Content Include="vendor\scripts\esm\popper.js" />
+    <Content Include="vendor\scripts\esm\popper.min.js" />
+    <Content Include="MasterPages\User.Master" />
+    <Content Include="MasterPages\Management.Master" />
+    <None Include="vendor\scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="vendor\scripts\jquery-3.0.0.js" />
+    <Content Include="vendor\scripts\jquery-3.0.0.min.js" />
+    <Content Include="vendor\scripts\jquery-3.0.0.slim.js" />
+    <Content Include="vendor\scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="vendor\scripts\popper-utils.js" />
+    <Content Include="vendor\scripts\popper-utils.min.js" />
+    <Content Include="vendor\scripts\popper.js" />
+    <Content Include="vendor\scripts\popper.min.js" />
+    <Content Include="vendor\scripts\src\index.js" />
+    <Content Include="vendor\scripts\src\methods\defaults.js" />
+    <Content Include="vendor\scripts\src\methods\destroy.js" />
+    <Content Include="vendor\scripts\src\methods\disableEventListeners.js" />
+    <Content Include="vendor\scripts\src\methods\enableEventListeners.js" />
+    <Content Include="vendor\scripts\src\methods\placements.js" />
+    <Content Include="vendor\scripts\src\methods\update.js" />
+    <Content Include="vendor\scripts\src\modifiers\applyStyle.js" />
+    <Content Include="vendor\scripts\src\modifiers\arrow.js" />
+    <Content Include="vendor\scripts\src\modifiers\computeStyle.js" />
+    <Content Include="vendor\scripts\src\modifiers\flip.js" />
+    <Content Include="vendor\scripts\src\modifiers\hide.js" />
+    <Content Include="vendor\scripts\src\modifiers\index.js" />
+    <Content Include="vendor\scripts\src\modifiers\inner.js" />
+    <Content Include="vendor\scripts\src\modifiers\keepTogether.js" />
+    <Content Include="vendor\scripts\src\modifiers\offset.js" />
+    <Content Include="vendor\scripts\src\modifiers\preventOverflow.js" />
+    <Content Include="vendor\scripts\src\modifiers\shift.js" />
+    <Content Include="vendor\scripts\src\utils\clockwise.js" />
+    <Content Include="vendor\scripts\src\utils\computeAutoPlacement.js" />
+    <Content Include="vendor\scripts\src\utils\debounce.js" />
+    <Content Include="vendor\scripts\src\utils\find.js" />
+    <Content Include="vendor\scripts\src\utils\findCommonOffsetParent.js" />
+    <Content Include="vendor\scripts\src\utils\findIndex.js" />
+    <Content Include="vendor\scripts\src\utils\getBordersSize.js" />
+    <Content Include="vendor\scripts\src\utils\getBoundaries.js" />
+    <Content Include="vendor\scripts\src\utils\getBoundingClientRect.js" />
+    <Content Include="vendor\scripts\src\utils\getClientRect.js" />
+    <Content Include="vendor\scripts\src\utils\getFixedPositionOffsetParent.js" />
+    <Content Include="vendor\scripts\src\utils\getOffsetParent.js" />
+    <Content Include="vendor\scripts\src\utils\getOffsetRect.js" />
+    <Content Include="vendor\scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <Content Include="vendor\scripts\src\utils\getOppositePlacement.js" />
+    <Content Include="vendor\scripts\src\utils\getOppositeVariation.js" />
+    <Content Include="vendor\scripts\src\utils\getOuterSizes.js" />
+    <Content Include="vendor\scripts\src\utils\getParentNode.js" />
+    <Content Include="vendor\scripts\src\utils\getPopperOffsets.js" />
+    <Content Include="vendor\scripts\src\utils\getReferenceNode.js" />
+    <Content Include="vendor\scripts\src\utils\getReferenceOffsets.js" />
+    <Content Include="vendor\scripts\src\utils\getRoot.js" />
+    <Content Include="vendor\scripts\src\utils\getRoundedOffsets.js" />
+    <Content Include="vendor\scripts\src\utils\getScroll.js" />
+    <Content Include="vendor\scripts\src\utils\getScrollParent.js" />
+    <Content Include="vendor\scripts\src\utils\getStyleComputedProperty.js" />
+    <Content Include="vendor\scripts\src\utils\getSupportedPropertyName.js" />
+    <Content Include="vendor\scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <Content Include="vendor\scripts\src\utils\getWindow.js" />
+    <Content Include="vendor\scripts\src\utils\getWindowSizes.js" />
+    <Content Include="vendor\scripts\src\utils\includeScroll.js" />
+    <Content Include="vendor\scripts\src\utils\index.js" />
+    <Content Include="vendor\scripts\src\utils\isBrowser.js" />
+    <Content Include="vendor\scripts\src\utils\isFixed.js" />
+    <Content Include="vendor\scripts\src\utils\isFunction.js" />
+    <Content Include="vendor\scripts\src\utils\isIE.js" />
+    <Content Include="vendor\scripts\src\utils\isModifierEnabled.js" />
+    <Content Include="vendor\scripts\src\utils\isModifierRequired.js" />
+    <Content Include="vendor\scripts\src\utils\isNumeric.js" />
+    <Content Include="vendor\scripts\src\utils\isOffsetContainer.js" />
+    <Content Include="vendor\scripts\src\utils\removeEventListeners.js" />
+    <Content Include="vendor\scripts\src\utils\runModifiers.js" />
+    <Content Include="vendor\scripts\src\utils\setAttributes.js" />
+    <Content Include="vendor\scripts\src\utils\setStyles.js" />
+    <Content Include="vendor\scripts\src\utils\setupEventListeners.js" />
+    <Content Include="vendor\scripts\umd\popper-utils.js" />
+    <Content Include="vendor\scripts\umd\popper-utils.min.js" />
+    <Content Include="vendor\scripts\umd\popper.js" />
+    <Content Include="vendor\scripts\umd\popper.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Academicians.aspx.cs">
+      <DependentUpon>Academicians.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Academicians.aspx.designer.cs">
+      <DependentUpon>Academicians.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\AllOptions.aspx.cs">
+      <DependentUpon>AllOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\AllOptions.aspx.designer.cs">
+      <DependentUpon>AllOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Records.aspx.cs">
+      <DependentUpon>Records.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Records.aspx.designer.cs">
+      <DependentUpon>Records.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\RemoveRecords.aspx.cs">
+      <DependentUpon>RemoveRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\RemoveRecords.aspx.designer.cs">
+      <DependentUpon>RemoveRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Semesters.aspx.cs">
+      <DependentUpon>Semesters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Semesters.aspx.designer.cs">
+      <DependentUpon>Semesters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\StudentOptions.aspx.cs">
+      <DependentUpon>StudentOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\StudentOptions.aspx.designer.cs">
+      <DependentUpon>StudentOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Students.aspx.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Students.aspx.designer.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Management.Master.cs">
+      <DependentUpon>Management.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Management.Master.designer.cs">
+      <DependentUpon>Management.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NotFound.aspx.cs">
+      <DependentUpon>NotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotFound.aspx.designer.cs">
+      <DependentUpon>NotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\MakeChoice.aspx.cs">
+      <DependentUpon>MakeChoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MakeChoice.aspx.designer.cs">
+      <DependentUpon>MakeChoice.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="vendor\bootstrap\bootstrap-grid.css.map" />
+    <Content Include="vendor\bootstrap\bootstrap-grid.min.css.map" />
+    <Content Include="vendor\bootstrap\bootstrap-reboot.css.map" />
+    <Content Include="vendor\bootstrap\bootstrap-reboot.min.css.map" />
+    <Content Include="vendor\bootstrap\bootstrap.css.map" />
+    <Content Include="vendor\bootstrap\bootstrap.min.css.map" />
+    <Content Include="vendor\scripts\bootstrap.bundle.js.map" />
+    <Content Include="vendor\scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="vendor\scripts\bootstrap.js.map" />
+    <Content Include="vendor\scripts\bootstrap.min.js.map" />
+    <Content Include="vendor\scripts\esm\popper-utils.js.map" />
+    <Content Include="vendor\scripts\esm\popper-utils.min.js.map" />
+    <Content Include="vendor\scripts\esm\popper.js.map" />
+    <Content Include="vendor\scripts\esm\popper.min.js.map" />
+    <Content Include="vendor\scripts\index.js.flow" />
+    <Content Include="vendor\scripts\jquery-3.0.0.min.map" />
+    <Content Include="vendor\scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="vendor\scripts\popper-utils.js.map" />
+    <Content Include="vendor\scripts\popper-utils.min.js.map" />
+    <Content Include="vendor\scripts\popper.js.map" />
+    <Content Include="vendor\scripts\popper.min.js.map" />
+    <Content Include="vendor\scripts\README.md" />
+    <Content Include="vendor\scripts\umd\popper-utils.js.map" />
+    <Content Include="vendor\scripts\umd\popper-utils.min.js.map" />
+    <Content Include="vendor\scripts\umd\popper.js.flow" />
+    <Content Include="vendor\scripts\umd\popper.js.map" />
+    <Content Include="vendor\scripts\umd\popper.min.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="vendor\scripts\index.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56334</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56334/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
